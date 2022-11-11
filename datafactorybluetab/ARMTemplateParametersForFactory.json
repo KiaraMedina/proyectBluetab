@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactorybluetab"
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"Proyect_credential": {
+			"value": ""
+		},
+		"ls_datalake_accountKey": {
+			"value": ""
+		},
+		"ls_service_password": {
+			"value": ""
+		},
+		"procesamientoDatabricks_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "1106-185118-4akkdf1z"
+		},
+		"Proyect_properties_typeProperties_username": {
+			"value": "KiaraMedina"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"value": "https://datalakebluetab.dfs.core.windows.net/"
+		},
+		"ls_service_properties_typeProperties_host": {
+			"value": "C:\\Users\\kiara.medina_bluetab\\Desktop\\Taller_Azure"
+		},
+		"ls_service_properties_typeProperties_userId": {
+			"value": "\\kiara.medina_bluetab"
+		},
+		"procesamientoDatabricks_properties_typeProperties_existingClusterId": {
+			"value": "1106-185118-4akkdf1z"
+		}
+	}
+}

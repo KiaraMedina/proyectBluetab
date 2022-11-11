@@ -1,0 +1,119 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Nombre de instancia de Data Factory",
+			"defaultValue": "datafactorybluetab"
+		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"accessToken\"de \"AzureDatabricks1\""
+		},
+		"Proyect_credential": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"credential\"de \"Proyect\""
+		},
+		"ls_datalake_accountKey": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"accountKey\"de \"ls_datalake\""
+		},
+		"ls_service_password": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"password\"de \"ls_service\""
+		},
+		"procesamientoDatabricks_accessToken": {
+			"type": "secureString",
+			"metadata": "Cadena protegida para \"accessToken\"de \"procesamientoDatabricks\""
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1106-185118-4akkdf1z"
+		},
+		"Proyect_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "KiaraMedina"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://datalakebluetab.dfs.core.windows.net/"
+		},
+		"ls_service_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\Users\\kiara.medina_bluetab\\Desktop\\Taller_Azure"
+		},
+		"ls_service_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "\\kiara.medina_bluetab"
+		},
+		"procesamientoDatabricks_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1106-185118-4akkdf1z"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI de la cuenta de almacenamiento que contiene las plantillas de ARM vinculadas."
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Token de SAS para la cuenta de almacenamiento que contiene las plantillas de ARM vinculadas"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "datafactorybluetab_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
+					"Proyect_credential": {
+						"value": "[parameters('Proyect_credential')]"
+					},
+					"ls_datalake_accountKey": {
+						"value": "[parameters('ls_datalake_accountKey')]"
+					},
+					"procesamientoDatabricks_accessToken": {
+						"value": "[parameters('procesamientoDatabricks_accessToken')]"
+					},
+					"ls_service_password": {
+						"value": "[parameters('ls_service_password')]"
+					},
+					"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('AzureDatabricks1_properties_typeProperties_existingClusterId')]"
+					},
+					"Proyect_properties_typeProperties_username": {
+						"value": "[parameters('Proyect_properties_typeProperties_username')]"
+					},
+					"ls_datalake_properties_typeProperties_url": {
+						"value": "[parameters('ls_datalake_properties_typeProperties_url')]"
+					},
+					"procesamientoDatabricks_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('procesamientoDatabricks_properties_typeProperties_existingClusterId')]"
+					},
+					"ls_service_properties_typeProperties_host": {
+						"value": "[parameters('ls_service_properties_typeProperties_host')]"
+					},
+					"ls_service_properties_typeProperties_userId": {
+						"value": "[parameters('ls_service_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
