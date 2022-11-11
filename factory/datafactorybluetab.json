@@ -1,0 +1,9 @@
+{
+	"name": "datafactorybluetab",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c954050e-9728-492a-90b4-bbb969a2a396",
+		"tenantId": "a3825ce2-adf2-47a8-bfd8-f065e100275b"
+	}
+}
