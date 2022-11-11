@@ -18,7 +18,7 @@
 					"notebookPath": "/bluetab/spark"
 				},
 				"linkedServiceName": {
-					"referenceName": "AzureDatabricks1",
+					"referenceName": "procesamientoDatabricks",
 					"type": "LinkedServiceReference"
 				}
 			}
