@@ -156,7 +156,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Repos"
+							"notebookPath": "/Repos/1822141084@unjfsc.edu.pe/proyectBluetab/spark"
 						},
 						"linkedServiceName": {
 							"referenceName": "procesamientoDatabricks",
